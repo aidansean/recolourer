@@ -3,9 +3,13 @@ from project_module import project_object, image_object, link_object, challenge_
 p = project_object('recolourer', 'Recolourer')
 p.domain = 'http://www.aidansean.com/'
 p.path = 'recolourer'
-p.preview_image_ = image_object('http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg', 408, 287)
+p.preview_image    = image_object('%s/images/project.jpg'   %p.path, 150, 250)
+p.preview_image_bw = image_object('%s/images/project_bw.jpg'%p.path, 150, 250)
+p.folder_name = 'aidansean'
 p.github_repo_name = 'recolourer'
 p.mathjax = True
+p.tags = 'Tools'
+p.technologies = 'canvas,CSS,HTML,JavaScript'
 p.links.append(link_object(p.domain, 'recolourer', 'Live page'))
 p.introduction = 'This project has been on my to-do list for a very long time.  The idea is to take an image which is difficult for a colour blind person to view, and then remap the colours to make it easier for them to view.'
 p.overview = '''This project has been on the back-burner for many years, and a physicist interested in equal opportunities this issue has been of interest to me since my sabbatical year working as an equal opportunities officer.  Scientists often use colour to make plots clearer, most physicists are male, most colourblind people are male, and most scientist generally do not care about making their plots more accessible.  The situation is getting better, slowly, but I thought it would be useful to have a stop gap tool to help people.  This project was the first step in that direction, but since making the first step there have been many other higher quality tools out there. As a result I stopped working on this project and left it as a legacy tool.
